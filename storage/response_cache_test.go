@@ -113,7 +113,6 @@ func TestResposeCacheCopyInto(t *testing.T) {
 	if ok, err := rc2.GetResponse(cmdID, &val); !ok || err != nil || val.NewValue != 1 {
 		t.Errorf("unexpected failure getting response from destination: %t, %v, %+v", ok, err, val)
 	}
-
 }
 
 // TestResponseCacheInflight verifies GetResponse invocations block on
